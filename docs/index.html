@@ -25,5 +25,19 @@
 	  <button type="submit">Send</button>
 	</form>
 	<p>指定表單使用 Flexbox 佈局。 兩個控件之間的間隔消失了，因為彈性佈局的項目（item）默認沒有間隔。</p>  
+
+	<hr>
+
+	<style type="text/css">
+		.input  {
+		  flex-grow: 1;
+		}
+	</style>
+	<form class="form">
+	  <input type="email" name="email" class="input">
+	  <button type="submit">Send</button>
+	</form>
+	<p>兩個控件元素的寬度沒有發生變化，因為彈性佈局默認不改變項目的寬度。</p>
+	<p>輸入框佔據當前行的所有剩餘寬度，只需要指定輸入框的flex-grow屬性為1</p>
 </body>
 </html>
