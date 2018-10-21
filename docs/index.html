@@ -38,6 +38,31 @@
 	  <button type="submit">Send</button>
 	</form>
 	<p>兩個控件元素的寬度沒有發生變化，因為彈性佈局默認不改變項目的寬度。</p>
-	<p>輸入框佔據當前行的所有剩餘寬度，只需要指定輸入框的flex-grow屬性為1</p>
+	<p>輸入框佔據當前行的所有剩餘寬度，只需要指定輸入框的<mark>flex-grow</mark>屬性為1</p>
+
+	<hr>
+
+	<form action="#" class="form">
+	  <input type="email" placeholder="Enter your email" class="input">
+	  <button type="button"><svg>  <!-- a smiley icon -->  </svg></button>
+	</form>
+	<p>按鈕變高了，輸入框也自動變得一樣高</p>
+	<p>彈性佈局默認不改變項目的寬度，但是它默認改變項目的高度。如果項目沒有顯式指定高度，就將佔據容器的所有高度。</p>
+
+	<hr>
+
+	<style type="text/css">
+		.form-align  {
+		    display: flex;
+  			align-items: flex-start;
+		}
+	</style>
+	<form action="#" class="form-align">
+	  <input type="email" placeholder="Enter your email" class="input">
+	  <button type="button"><svg>  <!-- a smiley icon -->  </svg></button>
+	</form>
+	<p>input <mark>align-self</mark>屬性可以改變高度行為。</p>
+	<p>如果項目很多，一個個地設置align-self屬性就很麻煩。這時可以在容器元素（本例為表單）設置<mark>align-items</mark>屬性</p>
+	<p>form元素設置了align-items以後，就不用在控件上設置align-self</p>
 </body>
 </html>
