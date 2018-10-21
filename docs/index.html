@@ -5,6 +5,25 @@
 	<title>Flexbox</title>
 </head>
 <body>
+
+	<form>
+	  <input type="email" name="email">
+	  <button type="submit">Send</button>
+	</form>
+	<p>根據標準，兩個控件都是行內塊級元素（inline-block），也就是說，它們默認並排在一行上。</p>  
+	<p>這兩個控件之間有3~4像素的間隔，這是瀏覽器的內置樣式指定的。</p>  
 	
+	<hr>
+
+	<style type="text/css">
+		.form  {
+		  display: flex;
+		}
+	</style>
+	<form class="form">
+	  <input type="email" name="email">
+	  <button type="submit">Send</button>
+	</form>
+	<p>指定表單使用 Flexbox 佈局。 兩個控件之間的間隔消失了，因為彈性佈局的項目（item）默認沒有間隔。</p>  
 </body>
 </html>
